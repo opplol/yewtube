@@ -11,3 +11,6 @@ Cargo.lock
 
 .env
 docker-compose.override.yml
+
+#yew compiled files
+/dist/

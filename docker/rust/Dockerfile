@@ -9,4 +9,8 @@ RUN apt-get update && \
     rustup target add wasm32-unknown-unknown && \
     cargo install --locked trunk
 
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash - && \
+    apt install -y nodejs && \
+    npm i -g tailwindcss
+
 

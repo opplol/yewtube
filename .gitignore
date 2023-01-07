@@ -14,3 +14,6 @@ docker-compose.override.yml
 
 #yew compiled files
 /dist/
+
+#tailwind.css
+tailwind.css

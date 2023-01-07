@@ -22,7 +22,7 @@ fn video_list(VideosListProps { videos, on_click }: &VideosListProps) -> Html {
                 Callback::from(move |_| on_click.emit(video.clone()))
             };
             html! {
-                <p key={video.id} onclick={on_video_select}>{format!("{}: {}", video.speaker, video.title)}</p>
+                <p class="text-red-300 " key={video.id} onclick={on_video_select}>{format!("{}: {}", video.speaker, video.title)}</p>
             }
         })
         .collect()
@@ -118,9 +118,9 @@ fn app() -> Html {
     });
     html! {
         <>
-            <h1>{ "RustConf Explorer" }</h1>
+            <h1 class="text-3xl font-bold">{ "RustConf Explorer" }</h1>
             <div>
-                <h3>{ "Videos to watch" }</h3>
+                <h3 class="text-xl">{ "Videos to watch" }</h3>
                 // { videos }
                 <VideosList videos={(*videos).clone()} on_click={on_video_select.clone()} />
             </div>
